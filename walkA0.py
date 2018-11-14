@@ -3,9 +3,9 @@
 
 # In[9]:
 
-#This code is a Monte Carlo Code developed to integrate with and interact with minAone.py
+#This code is a Strategic Monte Carlo Code developed to integrate with and interact with minAone.py
 #Code is written by Sasha Shirman
-#March 2017
+#June 2018
 
 ###################################################################################################
 
