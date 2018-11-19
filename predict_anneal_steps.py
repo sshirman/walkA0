@@ -265,8 +265,6 @@ if nI>0 and len(I) < nT + predict_steps:
 
 print "loading Path file, saving to data.dat and params.dat"
 
-# Take the last nP values, and the last row (w/ largest beta)
-
 pathfile = 'D{0}_M{1}_IC{2}.dat'.format(nS,nM,pathnum)
 
 last_path_data = sp.loadtxt(pathfile)
