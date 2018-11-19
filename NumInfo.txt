@@ -1,0 +1,31 @@
+NumberStates, 11, This is the number of states in the system
+NumberParameters, 1, this is the number of parameters in the system
+NumberMeasurements, 7, this is the number of measurements recorded
+TimeSteps, 165, This is the total number of time steps that you have used
+deltaTime, 0.025, This is the time difference between each of the time steps
+NumberWalkers, 100, This is the number of walkers you want to have running
+NumberBurnInSteps, 2000, This is the number of steps you want for "burn in"
+alpha, 2, This is the value of alpha you used during minAone
+beta, 21, This is the value of beta where the best predictions occur (or the action flattens out)
+beta bad, 8, This is the value of beta where the worst predictions occur
+RfVariable1, 0.001, Rf for the first variable
+RfVariable2, 0.001, Rf for second
+RfVariable3, 0.001, Rf
+RfVariable4, 0.001, Rf
+RfVariable5, 0.001, Rf
+Rf6, 0.001, Rf
+Rf7, 0.001, Rf
+Rf8, 0.001, Rf
+Rf9, 0.001, Rf
+Rf10, 0.001, Rf
+Rf11, 0.001, Rf
+Measurement1, 0, Variable that we measure (one line for each, don't put any lines if have measurement function)
+Measurement1, 2, Variable that we measure (one line for each, don't put any lines if have measurement function)
+Measurement1, 4, Variable that we measure (one line for each, don't put any lines if have measurement function)
+Measurement1, 5, Variable that we measure (one line for each, don't put any lines if have measurement function)
+Measurement1, 6, Variable that we measure (one line for each, don't put any lines if have measurement function)
+Measurement1, 8, Variable that we measure (one line for each, don't put any lines if have measurement function)
+Measurement1, 10, Variable that we measure (one line for each, don't put any lines if have measurement function)
+BestPathIndex, 1, index of path from minAone that gives best results (lowest action)
+WorstPathIndex, 1, index of path from minAone that gives worst results (highest action)
+AnalysisAttemptNumber, 7, This is the label of the analysis attempt where all the minAone output is saved
