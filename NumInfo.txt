@@ -3,6 +3,7 @@ NumberParameters, 1, this is the number of parameters in the system
 NumberMeasurements, 7, this is the number of measurements recorded
 TimeSteps, 165, This is the total number of time steps that you have used
 deltaTime, 0.025, This is the time difference between each of the time steps
+DataCollectionRate, 1, Used if data is collected every n integration steps (if data is collected every step, this value is 1)
 NumberWalkers, 100, This is the number of walkers you want to have running
 NumberBurnInSteps, 2000, This is the number of steps you want for "burn in"
 alpha, 2, This is the value of alpha you used during minAone
