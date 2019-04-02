@@ -20,12 +20,12 @@ Rf9, 0.001, Rf
 Rf10, 0.001, Rf
 Rf11, 0.001, Rf
 Measurement1, 0, Variable that we measure (one line for each, don't put any lines if have measurement function)
-Measurement1, 2, Variable that we measure (one line for each, don't put any lines if have measurement function)
-Measurement1, 4, Variable that we measure (one line for each, don't put any lines if have measurement function)
-Measurement1, 5, Variable that we measure (one line for each, don't put any lines if have measurement function)
-Measurement1, 6, Variable that we measure (one line for each, don't put any lines if have measurement function)
-Measurement1, 8, Variable that we measure (one line for each, don't put any lines if have measurement function)
-Measurement1, 10, Variable that we measure (one line for each, don't put any lines if have measurement function)
+Measurement2, 2, Variable that we measure (one line for each, don't put any lines if have measurement function)
+Measurement3, 4, Variable that we measure (one line for each, don't put any lines if have measurement function)
+Measurement4, 5, Variable that we measure (one line for each, don't put any lines if have measurement function)
+Measurement5, 6, Variable that we measure (one line for each, don't put any lines if have measurement function)
+Measurement6, 8, Variable that we measure (one line for each, don't put any lines if have measurement function)
+Measurement7, 10, Variable that we measure (one line for each, don't put any lines if have measurement function)
 BestPathIndex, 1, index of path from minAone that gives best results (lowest action)
 WorstPathIndex, 1, index of path from minAone that gives worst results (highest action)
 AnalysisAttemptNumber, 7, This is the label of the analysis attempt where all the minAone output is saved
