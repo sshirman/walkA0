@@ -317,17 +317,21 @@ while step <nSteps+Nburn:
         sys.stdout.flush()
         
     if step>Nburn-1 and (step-Nburn)%(50*nSave) == 0:
+        WeightCalcForStates = weightcalc(testerposition, testerparam, BestPath, ParameterBest, SigmaData, SigmaParam)
         for i in range(nS):
             with open('Analysis_Attempt{1}/Results/variable_{0}.txt'.format(i,Attempt),'ab') as f:
                 np.savetxt(f,testerposition[:,i,:])
         with open('Analysis_Attempt{0}/Results/variableweights.txt'.format(Attempt),'ab') as vw:
-            np.savetxt(vw,weightcalc(testerposition, testerparam, BestPath, ParameterBest, SigmaData, SigmaParam))
+            np.savetxt(vw,WeightCalcForStates)
 
     if  step>Nburn-1 and (step-Nburn)%nSave == 0:
+        WeightCalcForParams = weightcalc(testerposition, testerparam, BestPath, ParameterBest, SigmaData, SigmaParam)
+        with open('Analysis_Attempt{0}/Results/initial_state_estimate.txt'.format(Attempt), 'ab') as isfile:
+            np.savetxt(isfile, testerposition[:,:,-1])
         with open('Analysis_Attempt{0}/Results/parameters_estimate.txt'.format(Attempt), 'ab') as p:
             np.savetxt(p, testerparam)
         with open('Analysis_Attempt{0}/Results/parameterweights.txt'.format(Attempt),'ab') as pw:
-            np.savetxt(pw,weightcalc(testerposition, testerparam, BestPath, ParameterBest, SigmaData, SigmaParam))
+            np.savetxt(pw,WeightCalcForParams)
     step+=1
 
 print('\n')
