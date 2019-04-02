@@ -6,8 +6,8 @@ deltaTime, 0.025, This is the time difference between each of the time steps
 NumberWalkers, 100, This is the number of walkers you want to have running
 NumberBurnInSteps, 2000, This is the number of steps you want for "burn in"
 alpha, 2, This is the value of alpha you used during minAone
-beta, 21, This is the value of beta where the best predictions occur (or the action flattens out)
-beta bad, 8, This is the value of beta where the worst predictions occur
+beta, 21, This is the value of beta where the best predictions occur (or the action flattens out) - indexing starts at 0
+beta bad, 8, This is the value of beta where the worst predictions occur - indexing starts at 0
 RfVariable1, 0.001, Rf for the first variable
 RfVariable2, 0.001, Rf for second
 RfVariable3, 0.001, Rf
