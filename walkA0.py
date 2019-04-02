@@ -62,15 +62,16 @@ nP = int(inputs[1])
 nM = int(inputs[2])
 nT = int(inputs[3])
 deltaT = inputs[4]
-Nwalk = int(inputs[5])
-Nburn = int(inputs[6])
-alpha = inputs[7]
-beta = int(inputs[8])
-betabad = int(inputs[9])
+SampFreqMeas = int(inputs[5])
+Nwalk = int(inputs[6])
+Nburn = int(inputs[7])
+alpha = inputs[8]
+beta = int(inputs[9])
+betabad = int(inputs[10])
 nSteps = Nburn*500
 nSave = int(Nburn/25)
-Rf = np.reshape(inputs[10:10+nS],(nS,1))
-numData = inputs[10+nS:-4].astype(int)
+Rf = np.reshape(inputs[11:11+nS],(nS,1))
+numData = inputs[11+nS:-4].astype(int)
 best = int(inputs[-4])
 second = int(inputs[-3])
 Attempt = int(inputs[-2])
@@ -173,7 +174,7 @@ def measurement(x,number_recordings):
 #Also need to figure out what the value of Rm is used in minAone so that the action is the same as
 #through the minimization procedure
 def ActionM(current,data, variablesrecorded):
-    A = np.sum(np.square(np.around(np.subtract(measurement(current,variablesrecorded),data),7)), axis = (1,2))
+    A = np.sum(np.square(np.around(np.subtract(measurement(current[:,:,::SampFreqMeas],variablesrecorded),data[:,::3]),7)), axis = (1,2))
     return A
     
 
@@ -238,7 +239,6 @@ def weightcalc(current, parameter, bestv, bestp, stdv, stdp):
         weightpre = weightpre
     else:
         weightpre = np.multiply(weightpre,np.power(np.reshape(np.prod(bias.pdf(parameter, bestp, stdp),axis = 1),(Nwalk,1)),np.divide(1,np.float(nT))))
-    #double check if above works in the >1 parameter case
     return weightpre
 
 testerposition = location+0.5*SigmaData*np.ones((Nwalk,nS,nT))*(0.5-np.random.rand(Nwalk,nS,nT))  
