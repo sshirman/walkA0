@@ -27,6 +27,6 @@ Measurement4, 5, Variable that we measure (one line for each, don't put any line
 Measurement5, 6, Variable that we measure (one line for each, don't put any lines if have measurement function)
 Measurement6, 8, Variable that we measure (one line for each, don't put any lines if have measurement function)
 Measurement7, 10, Variable that we measure (one line for each, don't put any lines if have measurement function)
-BestPathIndex, 1, index of path from minAone that gives best results (lowest action)
-WorstPathIndex, 1, index of path from minAone that gives worst results (highest action)
+BestPathIndex, 1, index of path from minAone that gives best results (lowest action) - indexing starts at 1
+WorstPathIndex, 1, index of path from minAone that gives worst results (highest action) - indexing starts at 1
 AnalysisAttemptNumber, 7, This is the label of the analysis attempt where all the minAone output is saved
